@@ -22,7 +22,7 @@ const Menu = () => {
           <HamburguerMenuLine />
         </HamburgerMenuWrapper>
       ) : (
-        <Nav>
+        <Nav openNav>
           <MenuItemWrapper>
             <HamburgerMenuWrapper onClick={handleOpenNav} insideNav>
               <HamburguerMenuLine insideNav />

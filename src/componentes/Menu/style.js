@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Nav = styled.nav`
   position: absolute;
@@ -13,18 +13,8 @@ export const Nav = styled.nav`
   @media screen and (min-width: 768px) {
     width: 40%;
   }
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     width: 25%;
-  }
-`;
-
-export const MenuItem = styled.li`
-  list-style-type: none;
-  font-weight: bold;
-  color: ${({ theme }) => theme.primaryColor};
-  font-size: 1rem;
-  @media screen and (min-width: 568px) {
-    font-size: 2rem;
   }
 `;
 
@@ -33,14 +23,29 @@ export const MenuItemWrapper = styled.ul`
   align-items; center;
   flex-direction: column;
   width: 100%;
-  margin: 10%;
+  margin: 20% 10%;
+  height: 60%;
+  @media screen and (min-width: 768px){
+     margin: 10%;
+  }
+`;
+
+export const MenuItem = styled.li`
+  list-style-type: none;
+  font-weight: bold;
+  color: ${({ theme }) => theme.primaryColor};
+  font-size: 1rem;
+  margin: 10px 0px;
+  @media screen and (min-width: 568px) {
+    font-size: 2rem;
+  }
 `;
 
 export const HamburgerMenuWrapper = styled.div`
   height: 20px;
   width: 25px;
   position: absolute;
-  top: ${({ insideNav }) => insideNav ? '30px' : '20px'};
+  top: ${({ insideNav }) => (insideNav ? "30px" : "20px")};
   right: 15px;
   cursor: pointer;
 `;
